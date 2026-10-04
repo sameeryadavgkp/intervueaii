@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mock Interviews · IntervueAI</title><meta name="description" content="IntervueAI interview preparation workspace (demo with mock data).">
+<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/components.css"><link rel="stylesheet" href="../css/responsive.css"></head>
+<body data-root="../"><header class="nav" id="nav"></header>
+<main class="app">
+<section class="ph"><div class="wrap ph-in"><div><p class="eyebrow">Mock Interviews</p><h1>Mock interviews</h1><p class="lead">Configure a timed session, answer questions and get a score report.</p></div><span class="badge">Demo · mock data</span></div></section>
+<section><div class="wrap app-grid"><div><ol class="stepper" id="stepper"><li class="on">Configure</li><li>Interview</li><li>Result</li></ol>
+<form id="mock" class="card"><h2 style="margin-bottom:20px;font-size:1.4rem">Configure</h2>
+<div class="grid2" style="margin-bottom:18px"><label class="card pick"><input type="radio" name="category" value="Technical" checked><strong>Technical</strong></label><label class="card pick"><input type="radio" name="category" value="Behavioral"><strong>Behavioral</strong></label><label class="card pick"><input type="radio" name="category" value="System Design"><strong>System Design</strong></label><label class="card pick"><input type="radio" name="category" value="HR"><strong>HR</strong></label></div>
+<label class="field">Job role<select name="role"><option>Software Engineer</option><option>Data Analyst</option><option>Product Manager</option><option>QA Engineer</option></select></label>
+<label class="field">Difficulty<select name="difficulty"><option>Easy</option><option selected>Medium</option><option>Hard</option></select></label>
+<label class="field">Duration (minutes)<select name="duration"><option>15</option><option selected>30</option><option>45</option><option>60</option></select></label><button class="btn btn-primary">Start mock interview</button></form>
+<div id="run" class="win" hidden><div class="win-top"><span class="dots"><i></i><i></i><i></i></span><b id="mn"></b><span class="pill" id="timer">00:00</span></div><div class="win-body"><div class="bar" style="margin:0 0 18px"><i><b id="prog" style="width:0"></b></i></div><h2 id="mq" style="font-size:1.4rem;margin-bottom:16px"></h2><textarea id="mans" placeholder="Type your answer…"></textarea><div class="cta-row"><button class="btn btn-primary" id="nextq">Next question</button><button class="btn btn-ghost" id="skipq">Skip</button></div></div></div>
+<div id="result" class="card" hidden></div></div>
+<aside class="card side"><h3>What you get</h3><ul class="list"><li>Five questions per category, with a timer.</li><li>Score breakdown across five skills.</li><li>Per-question review and a downloadable report.</li></ul><p class="note">Scores come from mock logic in this demo. No real AI model or backend is connected.</p></aside></div></section>
+</main><footer id="foot"></footer>
+<script src="../js/api.js"></script><script src="../js/navbar.js"></script><script src="../js/main.js"></script><script src=../js/mock-interviews.js></script>
+<script src="../js/chatbot.js"></script>
+</body></html>

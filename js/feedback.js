@@ -1,0 +1,3 @@
+API.getFeedback().then(r=>{$('#scores').innerHTML=[['Overall',Math.round((r.communication+r.technical+r.confidence)/3)],['Communication',r.communication],['Technical',r.technical],['Confidence',r.confidence]].map(([k,v])=>`<div class="card stat"><span>${k}</span><strong>${v}%</strong></div>`).join('');
+$('#insights').innerHTML=[['Strengths',r.strengths],['Improvements',r.weaknesses],['AI recommendations (mock)',r.suggestions]].map(([k,v])=>`<div class="card"><h3>${k}</h3>${ul(v)}</div>`).join('');
+$('#recent').innerHTML=r.recent.map(c=>`<div class="card"><p class="eyebrow">${c.d}</p><h3>${c.t}</h3><p class="score" style="font-size:2rem;margin:8px 0">${c.s}</p><p class="lead" style="font-size:.95rem;margin:0">${c.n}</p></div>`).join('')});

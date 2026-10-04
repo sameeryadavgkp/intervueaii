@@ -1,0 +1,10 @@
+(()=>{const R=document.body.dataset.root||'',P='pages/',f=location.pathname.split('/').pop()||'index.html';
+const logo=`<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#1a6dff"/><path d="M9 10h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-6l-4 3.5V22H9a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2z" fill="#fff"/><path d="M12.5 16l2.5 2.5 4.5-5" stroke="#1a6dff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const L=[['Dashboard','dashboard'],['AI Interview','ai-interview'],['Mock Interviews','mock-interviews'],['Resume/ATS','resume-ats'],['Coding','coding'],['Performance','performance']];
+const a=(n,p)=>`<a href="${R+P+p}.html" class="${f===p+'.html'?'active':''}">${n}</a>`;
+document.getElementById('nav').innerHTML=`<div class="wrap nav-in"><a class="logo" href="${R}index.html" aria-label="IntervueAI home">${logo}<span>Intervue<em>AI</em></span></a><button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button><nav class="nav-links" id="links">${L.map(x=>a(...x)).join('')}${a('Login','login')}<a class="btn btn-primary btn-sm" href="${R+P}ai-interview.html">Start Practicing</a></nav></div>`;
+document.getElementById('foot').outerHTML=`<footer class="foot"><div class="wrap"><div class="foot-grid"><div><a class="logo" href="${R}index.html">${logo}<span>Intervue<em>AI</em></span></a><p>Interview preparation workspace. This demo runs on mock data.</p></div>
+<div><h4>Practice</h4>${a('AI Interview','ai-interview')}${a('Mock Interviews','mock-interviews')}${a('Coding','coding')}</div><div><h4>Improve</h4>${a('Resume/ATS','resume-ats')}${a('Feedback','feedback')}${a('Performance','performance')}</div><div><h4>Account</h4>${a('Dashboard','dashboard')}${a('Login','login')}${a('Sign up','signup')}</div></div>
+<div class="foot-bot"><span>© 2026 IntervueAI</span><span>Demo frontend · results are mock data, not real AI</span></div></div></footer>`;
+const t=document.querySelector('.nav-toggle'),n=document.getElementById('links');
+t.onclick=()=>t.setAttribute('aria-expanded',n.classList.toggle('open'));n.onclick=e=>{if(e.target.tagName==='A')n.classList.remove('open')};})();

@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Resume / ATS · IntervueAI</title><meta name="description" content="IntervueAI interview preparation workspace (demo with mock data).">
+<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/components.css"><link rel="stylesheet" href="../css/responsive.css"></head>
+<body data-root="../"><header class="nav" id="nav"></header>
+<main class="app">
+<section class="ph"><div class="wrap ph-in"><div><p class="eyebrow">Resume / ATS</p><h1>Resume & ATS analysis</h1><p class="lead">Upload a resume, add a job description and review a sample ATS report.</p></div><span class="badge">Demo · mock data</span></div></section>
+<section><div class="wrap app-grid"><div><ol class="stepper" id="stepper"><li class="on">Upload</li><li>Analysis</li><li>Results</li></ol>
+<form id="ats" class="card"><label class="dropzone"><input type="file" id="file" accept=".pdf,.doc,.docx" hidden><span id="fname">Click to upload PDF or DOCX</span></label>
+<label class="field">Job description<textarea id="jd" placeholder="Paste the job description…"></textarea></label><button class="btn btn-primary">Analyse resume</button></form><div class="card" id="out" hidden style="margin-top:20px"></div></div>
+<aside class="card side"><h3>Good to know</h3><ul class="list"><li>Your file stays in your browser.</li><li>The report is a fixed sample.</li><li>Use it to preview the workflow.</li></ul><p class="note">Scores come from mock logic in this demo. No real AI model or backend is connected.</p></aside></div></section>
+</main><footer id="foot"></footer>
+<script src="../js/api.js"></script><script src="../js/navbar.js"></script><script src="../js/main.js"></script><script src=../js/resume-ats.js></script>
+<script src="../js/chatbot.js"></script>
+</body></html>

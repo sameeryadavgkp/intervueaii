@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Performance · IntervueAI</title><meta name="description" content="IntervueAI interview preparation workspace (demo with mock data).">
+<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/components.css"><link rel="stylesheet" href="../css/responsive.css"></head>
+<body data-root="../"><header class="nav" id="nav"></header>
+<main class="app">
+<section class="ph"><div class="wrap ph-in"><div><p class="eyebrow">Performance</p><h1>Performance tracking</h1><p class="lead">Scores, skills and recent interviews at a glance.</p></div><span class="badge">Demo · mock data</span></div></section>
+<section><div class="wrap"><div class="grid4" id="stats"></div>
+<div class="grid2" style="margin-top:20px"><div class="card"><p class="eyebrow">Overall score</p><p class="score" id="overall"></p><h3 style="margin:20px 0 8px">Progress</h3><svg class="graph" id="graph" viewBox="0 0 400 150" role="img" aria-label="Score trend"></svg></div><div class="card"><h3>Skill breakdown</h3><div id="skills"></div></div>
+<div class="card"><h3>Recent interviews</h3><table class="table"><thead><tr><th>Date</th><th>Interview</th><th>Type</th><th>Score</th></tr></thead><tbody id="hist"></tbody></table></div><div class="card"><h3>Recent activity</h3><div id="act"></div></div><div class="card" style="grid-column:1/-1"><h3>Practice activity</h3><div class="heat" id="heat" aria-label="Practice heatmap"></div><p class="note" id="hcount"></p></div></div></div></section>
+</main><footer id="foot"></footer>
+<script src="../js/api.js"></script><script src="../js/navbar.js"></script><script src="../js/main.js"></script><script src=../js/performance.js></script>
+<script src="../js/chatbot.js"></script>
+</body></html>
